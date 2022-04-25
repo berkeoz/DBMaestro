@@ -10,33 +10,28 @@ pipeline {
         stage("init") {
             steps {
                 script {
-                 
+                 echo "Init"
                 }
             }
         }
         stage("build") {
             steps {
                 script {
-                  
+                  echo "Build"
                 }
             }
         }
         stage("test") {
-            when {
-                expression {
-                    params.executeTests
-                }
-            }
             steps {
                 script {
-                   
+                   echo "Test"
                 }
             }
         }
         stage("deploy") {
             steps {
                 script {
-                   
+                   echo "Deploy"
                 }
             }
         }
