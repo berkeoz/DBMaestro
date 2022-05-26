@@ -1,4 +1,30 @@
 {
-  "Projects": [],
+  "Projects": [
+    {
+      "GlobalData": {
+        "ProjectId": "eb2d7530-5c70-4485-acec-ad79b144eb41",
+        "ProjectName": "poc_project",
+        "DBTypeName": "Oracle",
+        "Environments": null,
+        "SourceControlPathType": 0,
+        "Configuration": {
+          "BuildMigrationScriptAutomatically": true,
+          "DBConfiguration": {},
+          "NumberOfRevisionsInViewHistory": 10,
+          "NumberOfTagsInBuildOptions": 10,
+          "PreventCommitObjectWithConflict": false,
+          "UseCache": null
+        },
+        "ProjectArchitecture": 1,
+        "LocalDirectory": "C:\\Users\\admin\\Documents\\projectName"
+      },
+      "UserData": [
+        {
+          "UserName": "berkeoz",
+          "DatabasesData": []
+        }
+      ]
+    }
+  ],
   "GlobalConfigurations": null
 }
