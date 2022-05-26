@@ -5,7 +5,26 @@
         "ProjectId": "eb2d7530-5c70-4485-acec-ad79b144eb41",
         "ProjectName": "poc_project",
         "DBTypeName": "Oracle",
-        "Environments": null,
+        "Environments": [
+          {
+            "EnvironmentId": "7af4fa46-d53e-4cc1-bd9a-010e0d7b7288",
+            "EnvironmentName": "Dev_Env_1",
+            "EnvironmentType": "DEV",
+            "Databases": [
+              {
+                "DatabaseId": "b07dcef1-8797-49b0-82af-b04582804891",
+                "DatabaseAliasName": "dev_db",
+                "DatabaseConnectionDetails": null,
+                "RepositoryDetails": {
+                  "$type": "DOP.SourceControl.ExternalSourceControl.Git.Models.GitRepositoryDetails, DOP.SourceControl.ExternalSourceControl.Git",
+                  "RemoteRepositoryURL": "https://github.com/berkeoz/DBMaestro.git",
+                  "RemoteBranchName": "dev",
+                  "LocalBranchName": "dev"
+                }
+              }
+            ]
+          }
+        ],
         "SourceControlPathType": 0,
         "Configuration": {
           "BuildMigrationScriptAutomatically": true,
@@ -21,7 +40,43 @@
       "UserData": [
         {
           "UserName": "berkeoz",
-          "DatabasesData": []
+          "DatabasesData": [
+            {
+              "DatabaseId": "b07dcef1-8797-49b0-82af-b04582804891",
+              "DatabaseAliasName": "dev_db",
+              "DatabaseConnectionDetails": null,
+              "BranchesDatabaseConnectionDetails": null,
+              "RepositoryCredentials": {
+                "UserName": "berkeoz",
+                "Password": "OwpWlkWmltynchlAGzUVJhagkl4gbzNshplobMMz7PjSNDNYC+pPI+/W6mO5R+Lj"
+              }
+            }
+          ]
+        },
+        {
+          "UserName": "#ALL",
+          "DatabasesData": [
+            {
+              "DatabaseId": "b07dcef1-8797-49b0-82af-b04582804891",
+              "DatabaseAliasName": "dev_db",
+              "DatabaseConnectionDetails": null,
+              "BranchesDatabaseConnectionDetails": [
+                {
+                  "BranchName": "dev",
+                  "DatabaseConnectionDetails": {
+                    "DBTypeName": "Oracle",
+                    "host": "dopx-berke.us-central1-a.c.dbmaestro-dev.internal",
+                    "port": "1522",
+                    "identifierType": "SERVICE_NAME",
+                    "identifier": "orclpdb.us-central1-a.c.dbmaestro-dev.internal",
+                    "userName": "user_dev",
+                    "Password": "do1NBD0OcmAl1jAcpH7iWg=="
+                  }
+                }
+              ],
+              "RepositoryCredentials": null
+            }
+          ]
         }
       ]
     }
