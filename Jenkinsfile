@@ -11,6 +11,8 @@ pipeline {
             steps {
                 script {
                    gv = load "script.groovy" 
+	           bat 'java -jar C:\\agent\\DBmaestroAgent.jar -GetEnvPackages -ProjectName "poc_oracle" -EnvName "Dev_Env_1" -Server "DOPX-BERKE:8017" -AuthType DBmaestroAccount -UserName "poc@dbmaestro.com"'
+           
 		
                 }
             }
@@ -19,18 +21,20 @@ pipeline {
             steps {
                 script {
                     gv.buildApp()
+		    bat 'java -jar C:\\agent\\DBmaestroAgent.jar -GetEnvPackages -ProjectName "poc_oracle" -EnvName "Release Source" -Server "DOPX-BERKE:8017" -AuthType DBmaestroAccount -UserName "poc@dbmaestro.com"'
                 }
             }
         }
         stage("test") {
-            when {
-                expression {
-                    params.executeTests
-                }
-            }
+            //when {
+            //    expression {
+            //        params.executeTests
+            //    }
+            //}
             steps {
                 script {
                     gv.testApp()
+		    bat 'java -jar C:\\agent\\DBmaestroAgent.jar -GetEnvPackages -ProjectName "poc_oracle" -EnvName "QA_Env_1" -Server "DOPX-BERKE:8017" -AuthType DBmaestroAccount -UserName "poc@dbmaestro.com"'
                 }
             }
         }
@@ -38,6 +42,7 @@ pipeline {
             steps {
                 script {
                     gv.deployApp()
+		        bat 'java -jar C:\\agent\\DBmaestroAgent.jar -GetEnvPackages -ProjectName "poc_oracle" -EnvName "Prod_Env_1" -Server "DOPX-BERKE:8017" -AuthType DBmaestroAccount -UserName "poc@dbmaestro.com"'
                 }
             }
         }
