@@ -12,7 +12,12 @@ pipeline {
                 script {
                    gv = load "script.groovy" 
 	           bat 'java -jar C:\\agent\\DBmaestroAgent.jar -GetEnvPackages -ProjectName "poc_oracle" -EnvName "Dev_Env_1" -Server "DOPX-BERKE:8017" -AuthType DBmaestroAccount -UserName "poc@dbmaestro.com"'
-           
+ 	           def jsonString = '{"name":"katone","age":5}'
+                   def jsonObj = readJSON text: jsonString
+
+        	   assert jsonObj['name'] == 'katone'  // this is a comparison.  It returns true
+                   echo ${jsonObj.name}  // prints out katone
+        	   echo ${jsonObj.age}  // prints out 5          
 		
                 }
             }
