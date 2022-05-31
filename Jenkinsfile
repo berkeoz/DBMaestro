@@ -1,37 +1,43 @@
-
+def gv
 
 pipeline {
     agent any
-    parameters {
-        choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: '')
-        booleanParam(name: 'executeTests', defaultValue: true, description: '')
-    }
+    //parameters {
+    //    choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: '')
+    //    booleanParam(name: 'executeTests', defaultValue: true, description: '')
+    //}
     stages {
         stage("init") {
             steps {
                 script {
-                 echo "Init"
+                   gv = load "script.groovy" 
+				   echo "$gv.issueKey"
                 }
             }
         }
         stage("build") {
             steps {
                 script {
-                  echo "Build"
+                    gv.buildApp()
                 }
             }
         }
         stage("test") {
+            when {
+                expression {
+                    params.executeTests
+                }
+            }
             steps {
                 script {
-                   echo "Test"
+                    gv.testApp()
                 }
             }
         }
         stage("deploy") {
             steps {
                 script {
-                   echo "Deploy"
+                    gv.deployApp()
                 }
             }
         }
