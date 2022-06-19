@@ -78,6 +78,31 @@
           ]
         }
       ]
+    },
+    {
+      "GlobalData": {
+        "ProjectId": "0e08a418-a9a5-4338-9d40-8523af09fb08",
+        "ProjectName": "devproject",
+        "DBTypeName": "SQL Server",
+        "Environments": null,
+        "SourceControlPathType": 0,
+        "Configuration": {
+          "BuildMigrationScriptAutomatically": true,
+          "DBConfiguration": {},
+          "NumberOfRevisionsInViewHistory": 10,
+          "NumberOfTagsInBuildOptions": 10,
+          "PreventCommitObjectWithConflict": false,
+          "UseCache": null
+        },
+        "ProjectArchitecture": 0,
+        "LocalDirectory": "C:\\Users\\admin\\Documents\\devprojectshared"
+      },
+      "UserData": [
+        {
+          "UserName": "berkeoz",
+          "DatabasesData": []
+        }
+      ]
     }
   ],
   "GlobalConfigurations": null
