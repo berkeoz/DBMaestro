@@ -21,6 +21,17 @@
                   "RemoteBranchName": "main",
                   "LocalBranchName": "main"
                 }
+              },
+              {
+                "DatabaseId": "6fe77162-ef3a-4856-9836-9bc907ee4d72",
+                "DatabaseAliasName": "dev_db_2",
+                "DatabaseConnectionDetails": null,
+                "RepositoryDetails": {
+                  "$type": "DOP.SourceControl.ExternalSourceControl.Git.Models.GitRepositoryDetails, DOP.SourceControl.ExternalSourceControl.Git",
+                  "RemoteRepositoryURL": "https://github.com/berkeoz/DBM_sandbox2.git",
+                  "RemoteBranchName": "main",
+                  "LocalBranchName": "main"
+                }
               }
             ]
           }
@@ -55,6 +66,28 @@
                     "userName": "test_user2",
                     "dbName": "test_db2",
                     "Password": "do1NBD0OcmAl1jAcpH7iWg=="
+                  }
+                }
+              ],
+              "RepositoryCredentials": {
+                "UserName": "berkeoz",
+                "Password": "OwpWlkWmltynchlAGzUVJhagkl4gbzNshplobMMz7PjSNDNYC+pPI+/W6mO5R+Lj"
+              }
+            },
+            {
+              "DatabaseId": "6fe77162-ef3a-4856-9836-9bc907ee4d72",
+              "DatabaseAliasName": "dev_db_2",
+              "DatabaseConnectionDetails": null,
+              "BranchesDatabaseConnectionDetails": [
+                {
+                  "BranchName": "main",
+                  "DatabaseConnectionDetails": {
+                    "DBTypeName": "SQL Server",
+                    "host": "localhost",
+                    "authType": "SqlAuthentication",
+                    "userName": "test_user",
+                    "dbName": "test_db",
+                    "Password": "ikFJ/DK1Tf9cIH8Wr4joUg=="
                   }
                 }
               ],
